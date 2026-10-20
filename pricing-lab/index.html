@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0a090d">
+  <title>NOISY · Пет логики за цените</title>
+  <link rel="icon" href="assets/symbol.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="lab-header"><a href="#a" aria-label="NOISY, първи вариант"><img src="assets/logo.svg" alt="NOISY" width="112" height="32"></a><span>Продуктова работилница <span class="date">/ 20.10.2026</span></span><a class="text-link" href="#conclusion">Препоръката ↓</a></header>
+  <main>
+    <section class="intro">
+      <span class="eyebrow">Една услуга. Пет начина да я обясним.</span>
+      <h1>По-лесно е,<br>когато е ясно.</h1>
+      <p>Какво получавам? За колко души? Какво се доплаща?<br class="desktop-only"> Всеки вариант подрежда тези отговори по различен начин.</p>
+    </section>
+    <nav class="variant-nav" aria-label="Ценови логики">
+      <button data-model="a" aria-pressed="true"><b>А</b><span>Стойност<small>Препоръка</small></span></button>
+      <button data-model="b" aria-pressed="false"><b>Б</b><span>Един въпрос<small>Поетапен избор</small></span></button>
+      <button data-model="c" aria-pressed="false"><b>В</b><span>Виж разликата<small>Пряко сравнение</small></span></button>
+      <button data-model="d" aria-pressed="false"><b>Г</b><span>Готови комбинации<small>Нова продуктова логика</small></span></button>
+      <button data-model="e" aria-pressed="false"><b>Д</b><span>Плащаш за хората<small>Нова ценова логика</small></span></button>
+    </nav>
+    <section class="model-context" aria-labelledby="model-title">
+      <div><span class="eyebrow" id="model-status"></span><h2 id="model-title"></h2><p id="model-description"></p></div>
+      <button class="outline" id="copy-link">Копирай този вариант ↗</button>
+    </section>
+    <div class="workbench">
+      <section class="preview" aria-label="Интерактивен макет на ценовата секция">
+        <div class="preview-label"><span><i></i> Така го вижда посетителят</span><span>Интерактивен макет</span></div>
+        <div id="mockup"></div>
+      </section>
+      <aside class="reasoning" aria-label="Обяснение на логиката" id="reasoning"></aside>
+    </div>
+    <section class="conclusion" id="conclusion">
+      <span class="eyebrow">Моята препоръка</span>
+      <h2>Започваме с А.<br>Проверяваме срещу Б.</h2>
+      <p class="lead">Едно ясно обяснение за съдържанието. Един избор за хората. Периодът идва след това.</p>
+      <div class="conclusion-grid"><div><h3>Първо изясняваме офертата</h3><p>Solo и Together дават един и същ основен каталог. Разликата е броят хора. Premium пакетите разширяват този каталог и се заплащат отделно.</p></div><div><h3>После проверяваме разбирането</h3><p>Показваме А и Б на различни хора за 5 секунди. Питаме какво получават, за колко души е цената и дали Premium е включен. Следим точните отговори и избора на план.</p></div></div>
+      <p class="quiet">Това е препоръка за тест, без доказан ръст в конверсията. Г и Д са хипотези за промяна на продукта, които изискват финансов и продуктов разчет.</p>
+    </section>
+    <section class="facts" aria-label="Основа и отворени въпроси">
+      <details><summary>Какво е проверено и какво още трябва да решим</summary><div class="facts-content">
+        <h3>Основа на вариантите А, Б и В</h3>
+        <p>Solo: 14,90 € за 1 човек. Together: 24,90 € за до 5 души със собствени профили. Съдържанието е еднакво. Един човек плаща общата сума за Together; цената на човек е разпределение на разхода. Не обещаваме автоматично разделяне на плащането или конкретен брой едновременни екрани.</p>
+        <p>Периоди: 1, 3 и 12 месеца; отстъпки 0%, 10% и 15%. Изчислението следва текущия прототип: намалената месечна цена се отрязва до стотинки, после се умножава по периода. Затова Solo за 12 месеца е 151,92 €. Това правило трябва да се уеднакви с реалния билинг преди пускане.</p>
+        <p>Регистрацията е следващата стъпка. Маркетинг страницата не съдържа плащане, избор на добавки или промокод. Бутоните тук отварят демонстрационно обобщение.</p>
+        <h3>Трите важни неясноти</h3>
+        <ol><li><b>Основният каталог:</b> липсва точен списък кои заглавия и събития влизат в абонамента и кои са Premium. Имената на четирите зони сами по себе си не решават този въпрос. Нужни са проверени примери от каталога, означени „Включено“ и „С Premium“.</li><li><b>Добавките:</b> старата политика има различни цени за Solo/Together. Решението от 14.10 задава еднакви цени за двата плана: 7,60 € за Premium Films и 14,60 € за Premium Sport, а прототипът прилага и отделни отстъпки. Няма да представяме тези разминавания като окончателна тарифа.</li><li><b>Безплатният достъп:</b> старата политика описва Free ниво, а решението от 02.10 го отменя. В тези варианти няма обещание за безплатно гледане. Наличността на всяка зона при старта също трябва да се потвърди.</li></ol>
+        <h3>Прочетен контекст</h3><p>Продуктовите факти и основата на проекта; ценовата политика от 23.08, цитирана в проектните материали; решенията от 02.10 и 14.10; срещата от 14.10; текущият код на цените и добавките; историята на отхвърлените варианти D/E/F. Оригиналният файл от Slack не е проверен повторно в тази сесия.</p>
+        <p>Правилото за сравнение с еднакви атрибути следва <a href="https://www.nngroup.com/articles/comparison-tables/" target="_blank" rel="noreferrer">изследването на NN/g за таблици за сравнение</a>. Конкретните пет логики и препоръката са наши продуктови хипотези.</p>
+      </div></details>
+    </section>
+    <footer><img src="assets/logo.svg" width="88" height="28" alt="NOISY"><p>Работни концепции за обсъждане. Цените и условията тук не са търговска оферта.</p></footer>
+  </main>
+  <dialog id="selection"><button class="dialog-close outline" aria-label="Затвори обобщението">Затвори ×</button><span class="eyebrow">Демонстрация на следващата стъпка</span><h2>Изборът ти е ясен.</h2><div id="selection-detail"></div><p>В истинския сайт следва регистрация, след което избор на допълнително съдържание и плащане. Този макет не създава профил и не извършва покупка.</p></dialog>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+</body>
+</html>
