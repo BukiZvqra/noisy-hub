@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NOISY Theatre · В движение</title>
+  <meta name="description" content="Три анимирани версии на Theatre. Избери ефект, функция и устройство.">
+  <meta name="theme-color" content="#09090b">
+  <link rel="icon" href="media/symbol.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/gsap.min.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <header class="top"><a href="./" aria-label="NOISY, начало на демото"><img src="media/logo.svg" alt="NOISY" width="108" height="32"></a><span>Theatre / В движение</span><span class="demo">Демо</span></header>
+  <main>
+    <div class="intro"><p class="eyebrow">ЕДИН ЕКРАН. ПОВЕЧЕ ВЪЗМОЖНОСТИ.</p><h1>Повече от гледането.</h1><p>Три начина да разкажем Theatre. Избери ефект и виж как оживява.</p></div>
+    <div class="mode-tabs" role="tablist" aria-label="Ефект">
+      <button role="tab" id="tab-pop" aria-controls="stage" data-mode="pop"><span>01</span> Извън екрана</button>
+      <button role="tab" id="tab-cinema" aria-controls="stage" data-mode="cinema"><span>02</span> Кино монтаж</button>
+      <button role="tab" id="tab-handoff" aria-controls="stage" data-mode="handoff"><span>03</span> Между устройствата</button>
+    </div>
+    <section class="workspace" aria-label="Анимирана визуализация">
+      <div class="options"><div class="choices" role="group" aria-label="Функция"><button data-feature="continue">Продължи</button><button data-feature="share">Сподели</button><button data-feature="cast">Актьори</button></div><span class="option-hint" id="mode-description"></span></div>
+      <div id="stage" class="stage" role="tabpanel" aria-labelledby="tab-pop">
+        <div class="stage-copy"><img src="media/theatre.svg" class="theatre" alt="Theatre" width="132" height="40"><div class="copy-motion"><p class="take" id="take">01 / ИЗВЪН ЕКРАНА</p><h2 id="feature-title"></h2><p id="feature-copy"></p></div></div>
+        <div class="visual" aria-label="Преглед на ефекта">
+          <div class="ambient"></div><div class="device-scene">
+            <div class="device" data-device="phone"><div class="screen"><div class="wide-scene"><video class="wide-video" muted playsinline loop preload="metadata" poster="media/wide.jpg"><source src="media/wide.webm" type="video/webm"><source src="media/wide.mp4" type="video/mp4"></video><img src="media/theatre.svg" class="screen-brand" alt=""><div class="wide-caption">Тази вечер в Theatre</div></div><video class="product-video" muted playsinline loop preload="auto"></video><span class="island"></span><div class="screen-shade"></div></div><div class="device-foot"></div></div>
+          </div>
+          <div class="extracted" aria-hidden="true"><div class="detail-crop"><video class="detail-video" muted playsinline loop preload="auto"></video></div><div class="detail-caption"><span class="detail-dot"></span><span id="detail-label"></span></div></div>
+          <div class="focus-line" aria-hidden="true"></div><div class="light-wipe" aria-hidden="true"></div>
+          <div class="device-caption" aria-live="polite"><span></span><span id="device-name">Телефон</span></div>
+        </div>
+      </div>
+      <div class="device-bar"><span>Виж на</span><div class="devices" role="group" aria-label="Устройство"><button data-device="phone" aria-label="Телефон"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></svg><span>Телефон</span></button><button data-device="tablet" aria-label="Таблет"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M18 10v4"/></svg><span>Таблет</span></button><button data-device="laptop" aria-label="Лаптоп"><svg viewBox="0 0 24 24"><path d="M4 16V4h16v12M2 17h20l-2 3H4z"/></svg><span>Лаптоп</span></button><button data-device="tv" aria-label="Телевизор"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="1"/><path d="M8 21l2-4m6 4-2-4"/></svg><span>Телевизор</span></button></div></div>
+      <div class="transport"><button id="play" aria-label="Пауза"><svg id="play-icon" viewBox="0 0 24 24"><path d="M8 6v12M16 6v12"/></svg></button><button id="replay" aria-label="Отначало"><svg viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></svg></button><label for="seek" class="sr-only">Позиция в анимацията</label><input id="seek" type="range" min="0" max="12" step="0.01" value="0"><output id="time" for="seek">00:00 / 00:12</output><span class="loop-label">Повтаря се</span></div>
+    </section>
+    <div class="note"><span id="effect-note"></span><span>Оригинални екрани на NOISY Theatre</span></div>
+  </main>
+  <footer><span>NOISY Theatre</span><span>Експеримент с движение · 2026</span></footer>
+</body></html>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 99.63 104"><defs><linearGradient id="NOISY_Spectrum_RGB" data-name="NOISY Spectrum RGB" x1="0" y1="51.73" x2="99.63" y2="51.73" gradientTransform="translate(0 103.73) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b61dff"/>
+      <stop offset=".33" stop-color="#ce13a8"/>
+      <stop offset="1" stop-color="red"/>
+    </linearGradient></defs><path fill="url(#NOISY_Spectrum_RGB)" d="M99.63,8.61l-38.39,5.26,17.97,43.75L4.93,0l22.61,57.62L0,43.54l24.34,60.46h32.14v-23.53l40.16,6.04-13.28-22.73,13.28,7.36,2.99-62.53Z"/></svg>
